@@ -1,0 +1,92 @@
+%% Trabalho de Conclusão de Curso
+\documentclass[tcc]{ifbclass/ifbclass}
+
+%% Insira as informações do seu trabalho aqui
+\title{Título do Trabalho} 
+\date{2023}
+\author{Nome completo do Autor}
+\adviser{Nome completo do Orientador}
+\address{BRASÍLIA} 
+
+%%se o membro da banca for do gênero feminino coloque [a]
+\membroum[a]{Dr.ª Primeira Membro da Banca}
+\membrodois{Dr. Segundo Membro da Banca}
+\membrotres[a]{Dr.ª Terceira Membro da Banca}
+%\membroquatro[a]{Dr.ª Quarta Membro da Banca}
+
+% Macros (Se necessario, defina suas proprias aqui)
+
+%começo do documento
+\begin{document}
+
+\frontmatter
+\frontpage
+
+\presentationpage
+
+% Quando a biblioteca preparar a ficha catalografica, insira-a aqui
+% após defesa do trabalho
+\begin{fichacatalografica}
+% \includepdf{fig_ficha_catalografica.pdf} 
+% crie o arquivo com esse nome e descomente essa linha
+\end{fichacatalografica}
+
+\banca
+%Comente entre linhas \begin e \end para ocultar 
+%\begin{dedicatory} %OPCIONAL
+%Dedico este trabalho à minha família.
+%\end{dedicatory}
+  
+\acknowledgements %OPCIONAL 
+\input{text/0.1 agradecimentos}
+
+\begin{epigraph}[]{Nome do autor} %OPCIONAL
+Elemento opcional. Espaço destinado à epígrafe (elemento opcional). Nesta folha, o autor usa uma citação, seguida de indicação de autoria e ano, relacionada com a matéria tratada no corpo do trabalho.
+\end{epigraph}
+
+\resumo
+% Escreva seu resumo no arquivo resumo.tex
+\setlength{\parindent}{0pt}
+\input{text/0.2 resumo}
+
+  
+\abstract
+% Escreva seu abstract em ingles no arquivo abstract.tex
+\setlength{\parindent}{0pt}
+\input{text/0.3 abstract}
+
+
+%ATENCAO.
+%Se alguma dessas listas estiver vazia no seu trabalho, comente a linha com um '%'
+
+% Lista de figuras
+\listoffigures
+
+% Lista de tabelas
+\listoftables
+
+% Glossário
+\listofacronyms
+\input{text/0.4 acronyms}
+
+% Sumário
+\tableofcontents
+
+\mainmatter
+
+
+%Para cada seção do seu trabalho, edite o arquivo .tex na pasta text/
+
+\input{text/1 introducao}
+\input{text/2 conceitos_revisao}
+\input{text/3 metodologia}
+\input{text/4 resultados}
+\input{text/5 conclusao}
+
+% Insira as Referencias no  arquivo references.bib na pasta bib/
+\begin{references}
+  \bibliography{bib/references}
+\end{references}
+
+
+\end{document}

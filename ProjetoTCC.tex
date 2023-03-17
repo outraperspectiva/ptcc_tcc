@@ -1,0 +1,42 @@
+%% Projeto para Qualificação
+\documentclass[ptcc]{ifbclass/ifbclass}
+
+%% Insira as informações do seu trabalho aqui
+\title{Título do Trabalho} 
+\date{2023}
+\author{Nome completo do Autor}
+\adviser{Nome completo do Orientador}
+\address{BRASÍLIA} 
+
+
+%% Início do documento
+\begin{document}
+\frontpage
+
+% Lista de figuras
+\listoffigures
+
+% Lista de tabelas
+\listoftables
+
+% Glossário
+\listofacronyms
+\input{text/0.4 acronyms}
+
+% Sumário
+\tableofcontents
+
+\mainmatter
+
+%Para cada seção do seu trabalho, edite o arquivo .tex na pasta text/
+\input{text/1 introducao}
+\input{text/2 conceitos_revisao}
+\input{text/3 metodologia}
+\input{text/4 cronograma}
+
+% Insira as Referencias no  arquivo references.bib na pasta bib/
+\begin{references}
+  \bibliography{bib/references}
+\end{references}
+
+\end{document}
